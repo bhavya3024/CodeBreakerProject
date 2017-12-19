@@ -3,12 +3,12 @@ let attempt = document.getElementById('attempt');
 function guess() {
     let input = document.getElementById('user-guess');
     //add functionality to guess function here
-    if(validateInput(input.value)){
-        attempt++;
-    }
-    else{
+    if(!validateInput(input.value)){
         setMessage('Guesses must be exactly 4 characters long.');
         return false;
+    }
+    else{
+      attempt+=1;
     }
     if(answer === ''|| attempt === '')
     setHiddenFields();
