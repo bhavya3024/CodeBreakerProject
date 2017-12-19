@@ -16,17 +16,11 @@ function guess() {
 }
 //implement new functions here
 function setHiddenFields(){
- answer = Math.floor(Math.random()*10000).toString();
+ answer.value = Math.floor(Math.random()*10000).toString();
  attempt = 0;
-   if(answer.length === 3){
-       answer = '0'+answer;
-   }
-   else if(answer.length === 2){
-       answer = '00'+answer;
-   }
-   else if(answer.length === 1){
-       answer = '000'+answer;
-   }
+  while(answer.value.length < 4){
+      answer.value = '0'+ answer.value;
+  }
 }
 function setMessage(message){
    document.getElementById("message").innerHTML = message;
