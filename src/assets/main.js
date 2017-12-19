@@ -8,6 +8,7 @@ function guess() {
         attempt++;
     }
     else{
+        setMessage("Guesses must be exactly 4 characters long");
         return false;
     }
     if(annswer === ''|| attempt === '')
@@ -30,7 +31,6 @@ function validateInput(input){
        return true;
    }
    else{
-       setMessage("Guesses must be exactly 4 characters long");
        return false;
    }
 }
