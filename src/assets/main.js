@@ -8,9 +8,9 @@ function guess() {
         return false;
     }
     else{
-      attempt.value++;
+      attempt.value+=1;
     }
-    if(answer === ''|| attempt === '')
+    if(answer.value === ''|| attempt.value === '')
     setHiddenFields();
 
 }
